@@ -24,9 +24,7 @@
     </select>
     {{ ($errors->has('motivo_contatos_id')) ?  $errors->first('motivo_contatos_id') : '' }}
     <br>
-    <textarea name="msg" class="{{ $classe }}">
-        {{ old('msg') != '' ? old('msg') : 'Preencha aqui a sua mensagem' }}
-    </textarea>
+    <textarea name="msg" class="{{ $classe }}">{{ old('msg') != '' ? old('msg') : 'Preencha aqui a sua mensagem' }}</textarea>
     {{ ($errors->has('msg')) ?  $errors->first('msg') : '' }}
     <br>
     <button type="submit" class="{{ $classe }}">ENVIAR</button>
